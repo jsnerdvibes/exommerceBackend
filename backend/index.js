@@ -19,5 +19,6 @@ app.listen(PORT,()=>{
 
 app.get('/',(req,res)=>{
     res.send("Server is Up")
+    console.log("JWT_SECRET:", process.env.JWT_SECRET)
 })
 
