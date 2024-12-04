@@ -30,3 +30,8 @@ router.delete('/deleteProduct',deleteProductValidation,deleteProduct)
 
 //Find single product
 router.get('/findProduct/:_id',findProductValidation,findProduct)
+
+router.get("/test-jwt-secret", (req, res) => {
+    console.log("JWT_SECRET:", process.env.JWT_SECRET);  // Debug log
+    res.send({ success: true, jwtSecret: process.env.JWT_SECRET });
+  });
