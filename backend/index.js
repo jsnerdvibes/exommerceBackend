@@ -17,3 +17,7 @@ app.listen(PORT,()=>{
     console.log(`server listning on http://localhost:${PORT}`)
 })
 
+app.get('/',(req,res)=>{
+    res.send("Server is Up")
+})
+
